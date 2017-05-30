@@ -9,7 +9,10 @@ import { Hero } from './hero';
 export class HeroService {
 
   private heroesUrl = 'api/heroes'; // URL to web api
-  private headers = new Headers({'Content-Type': 'application/json'})
+  private headers = new Headers({
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  })
 
   constructor(private http: Http) { }
 
